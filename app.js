@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/registrations", registrationsRouter);
+app.use("/api/v1/registrations", registrationsRouter);
 
 app.all("*", (req, res) => {
     res.status(404).json({
